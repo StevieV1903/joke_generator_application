@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import JokeContainer from "./JokeContainer.js";
 
 const App = () => {
+
   return (
     <div className="App">
-      <p>App</p>
+      <JokeContainer />
     </div>
   );
 }
