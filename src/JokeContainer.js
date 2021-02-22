@@ -27,13 +27,13 @@ const JokeContainer = () => {
         const jokeAnswer = currentJoke.punchline;
         return (
             <div>
-            { isLoading ? <p className="loading">Generating Joke...</p> : 
+            { isLoading ? <p className="loading">generating new joke...</p> : 
             <p className="joke"> { jokeQuestion }</p>
             }
             
             <button className="punchline-reveal-button" 
             onClick={() => setPunchlineIsDisplayed( true ) }>
-                REVEAL PUNCHLINE...
+                reveal punchline...
             </button>
             { punchlineIsDisplayed && 
             <p className="punchline"> ...{ jokeAnswer } &#128514; &#128514; &#128514;</p>
@@ -49,7 +49,7 @@ const JokeContainer = () => {
             <h1 className="home-title-text">myJoke Generator <img className="logo" src={ logo }></img></h1>
     
             <p className="home-body-text">Stuck for a joke? Want to impress to your friends? <br/> Click on the button below to generate a random joke...</p>
-            <button className="joke-generator-button" onClick={() => handleJokeClick() }>GENERATE JOKE <img className="generate" src={ generate } alt="generate joke"/></button>
+            <button className="joke-generator-button" onClick={() => handleJokeClick() }>generate new joke <img className="generate" src={ generate } alt="generate joke"/></button>
         </div>
         
             { currentJoke.id && displayJokeSetup()} 
