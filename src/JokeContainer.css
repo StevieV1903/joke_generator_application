@@ -2,6 +2,7 @@
 
 
 .home-title-text {
+    font-size: 40px;
     margin: 0 auto;
     width: fit-content;
     padding: 20px;
@@ -18,8 +19,7 @@
 }
 .home-body-text {
     margin: 0;
-    margin-top: 16px;
-    padding-top: 10px;
+    margin-top: 20px;
     color: white;
     font-size: 18px;
     font-family: 'Thasadith', sans-serif;
@@ -130,4 +130,62 @@
     margin: 0;
     opacity: 1;
     transition: 0s
+  }
+
+  @media screen and (max-width: 415px) {
+    .home-title-text {
+        font-size: 26px;
+        padding: 15px;
+    }
+    .logo {
+      height: 35px;
+    }
+    .home-body-text {
+        font-size: 16px;
+    }
+    .joke-generator-button  {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .joke {
+        font-size: 18px;
+    }
+    .punchline {
+        font-size: 18px;
+    }
+    .generate {
+            height: 18px;
+    }
+    .loading {
+        font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .home-title-text {
+        font-size: 26px;
+        padding: 10px;
+    }
+    .logo {
+      height: 30px;
+    }
+    .home-body-text {
+        font-size: 16px;
+    }
+    .joke-generator-button  {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .joke {
+        font-size: 16px;
+    }
+    .punchline {
+        font-size: 16px;
+    }
+    .generate {
+            height: 16px;
+    }
+    .loading {
+        font-size: 16px;
+    }
   }
