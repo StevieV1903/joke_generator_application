@@ -10,7 +10,7 @@
     border: solid 2px darkviolet;
     box-shadow: 5px 5px 5px darkslategray;
     border-radius: 20px;
-    text-shadow: 2px 2px 5px darkviolet;
+    text-shadow: 2px 2px 5px grey;
     font-family: 'Unkempt', cursive; 
 }
 .logo {
@@ -55,6 +55,9 @@
     opacity: 0;
     transition: all 0.8s
   }
+  .joke-generator-button:active {
+    transform: translateY(4px);
+  }
   .joke-generator-button:active:after {
     padding: 0;
     margin: 0;
@@ -64,7 +67,7 @@
 
 .joke {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     border: solid 1px #9c9c9c;
     border-radius: 8px;
@@ -75,7 +78,7 @@
 }
 .punchline {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     border: solid 1px #9c9c9c;
     border-radius: 8px;
@@ -88,12 +91,25 @@
         height: 20px;
         vertical-align: text-bottom;
 }
-.loading {
+.loading-text {
     color: #ffffff;
     font-size: 18px;
     font-family: 'Thasadith', sans-serif;
 }
-
+.loading {
+    margin-left: auto;
+    margin-right: auto;
+    border: 8px solid darkviolet;
+    border-top: 8px solid #ff00bf;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+  @keyframes spin {
+    0%  { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 .punchline-reveal-button {
     position: relative;
     margin-top: 10px;
@@ -125,6 +141,9 @@
     opacity: 0;
     transition: all 0.8s
   }
+  .punchline-reveal-button:active {
+    transform: translateY(4px);
+  }
   .punchline-reveal-button:active:after {
     padding: 0;
     margin: 0;
@@ -148,15 +167,15 @@
         font-size: 16px;
     }
     .joke {
-        font-size: 18px;
+        font-size: 16px;
     }
     .punchline {
-        font-size: 18px;
+        font-size: 16px;
     }
     .generate {
             height: 18px;
     }
-    .loading {
+    .loading-text {
         font-size: 16px;
     }
   }
@@ -185,7 +204,7 @@
     .generate {
             height: 16px;
     }
-    .loading {
+    .loading-text {
         font-size: 16px;
     }
   }

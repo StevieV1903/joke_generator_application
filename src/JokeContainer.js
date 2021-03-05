@@ -3,22 +3,23 @@ import "./JokeContainer.css";
 import generate from "../src/assets/refresh.png";
 import logo from "../src/assets/jester.png";
 
-const JokeContainer = () => {
+const JokeContainer = ( { isLoading, setIsLoading } ) => {
 
     const [ currentJoke, setCurrentJoke ] = useState( { } );
     const [ punchlineIsDisplayed, setPunchlineIsDisplayed ] = useState( false );
-    const [ isLoading, setIsLoading ] = useState( false )
+
 
     const handleJokeClick = () => {
             setIsLoading( true )
+            console.log("isLoading", isLoading )
             fetch('https://official-joke-api.appspot.com/jokes/random')
                 .then (( response ) => response.json())
                 .then (( dataReturnedFromFetch ) => {
-                    setCurrentJoke( dataReturnedFromFetch)
+                    setCurrentJoke( dataReturnedFromFetch )
                     setIsLoading( false )
                     return dataReturnedFromFetch 
                 }) 
-                .catch((error) => console.error( error ))
+                .catch(( error ) => console.error( error ))
                 setPunchlineIsDisplayed( false ) 
         };
 
@@ -27,17 +28,27 @@ const JokeContainer = () => {
         const jokeAnswer = currentJoke.punchline;
         return (
             <div>
-            { isLoading ? <p className="loading">generating new joke...</p> : 
-            <p className="joke"> { jokeQuestion }</p>
-            }
+                {/* when isLoading is true run... */}
+                { isLoading && 
+                    <div className="loading-container">
+                    <p className="loading-text">generating joke...</p>
+                    <div className="loading">
+                    
+                    </div> 
+            </div>
+               }
+                {/* when currentJoke.id & isLoading is false run... */}
+                { currentJoke.id && !isLoading && 
+                <div>
+                    <p className="joke"> { jokeQuestion }</p>
             
-            <button className="punchline-reveal-button" 
-            onClick={() => setPunchlineIsDisplayed( true ) }>
-                reveal punchline...
-            </button>
-            { punchlineIsDisplayed && 
-            <p className="punchline"> ...{ jokeAnswer } &#128514; &#128514; &#128514;</p>
-            }
+                    <button className="punchline-reveal-button" onClick={() => setPunchlineIsDisplayed( true ) }>
+                            reveal punchline...
+                    </button>
+                        { punchlineIsDisplayed && 
+                        <p className="punchline"> ...{ jokeAnswer } &#128514; &#128514; &#128514;</p>
+                        }
+                </div> }
 
             </div>
         )
@@ -52,7 +63,7 @@ const JokeContainer = () => {
             <button className="joke-generator-button" onClick={() => handleJokeClick() }>generate new joke <img className="generate" src={ generate } alt="generate joke"/></button>
         </div>
         
-            { currentJoke.id && displayJokeSetup()} 
+            { displayJokeSetup() } 
         </>
     )
 };
