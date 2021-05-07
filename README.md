@@ -1,8 +1,8 @@
-# [Joke Generator](https://snooker-scorer-app.netlify.app/)
+# [myJoke Generator](https://snooker-scorer-app.netlify.app/)
 
-Snooker Scorer is a fully responsive web application that allows you to keep score during a snooker match, either if you are watching or playing with a friend. It includes a set-up page that inputs and stores players' names, lets you pick who is to break first and also lets the user decide how many frames the match will last for.
+myJoke Generator is a fully responsive reactjs SPA that makes a fetch to an external api and renders the joke on the click of a button and also requires the user to click a seperate button to reveal the punchline. Also includes some pretty awesome button animations.
 
-This responsive project was created by Steve Vance, Chris Fraser and James Fraser and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
+This responsive project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 The application is hosted on netlify.
 
