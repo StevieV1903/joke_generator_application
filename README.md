@@ -33,6 +33,8 @@ The application is hosted on netlify.
 
 ### Web Screenshots
 
+<img width="600" alt="Screenshot 2021-05-07 at 18 12 05" src="https://user-images.githubusercontent.com/56826534/117485072-dc6fcb00-af5f-11eb-9bf3-97dd2be3a8e8.png">
+<img width="600" alt="Screenshot 2021-05-07 at 18 11 51" src="https://user-images.githubusercontent.com/56826534/117485083-e1347f00-af5f-11eb-9cb7-20aa4b2dd4fa.png">
 
 
 ### Mobile Screenshots
