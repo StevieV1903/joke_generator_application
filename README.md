@@ -1,4 +1,4 @@
-# [myJoke Generator](myjokegenerator.netlify.app/)
+# [myJoke Generator](https://myjokegenerator.netlify.app/)
 
 myJoke Generator is a fully responsive reactjs SPA that makes a fetch to an external api and renders the joke on the click of a button and also requires the user to click a seperate button to reveal the punchline. Also includes some pretty awesome button animations.
 
