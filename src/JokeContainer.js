@@ -66,6 +66,7 @@ const JokeContainer = ( { isLoading, setIsLoading } ) => {
     
             <p className="home-body-text">Stuck for a joke? Want to impress to your friends? <br/> Click on the button below to generate a random joke...</p>
             <p className="home-body-text">Please bear in mind the jokes are generated at random from an external API. Some users may find some of the jokes offensive or quite simply rubbish, for which I apologise in advance!!</p>
+            
             <button className="joke-generator-button" onClick={() => handleJokeClick() }>generate new joke <img className="generate" src={ generate } alt="generate joke"/></button>
         </div>
         
