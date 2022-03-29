@@ -13,7 +13,8 @@ const JokeContainer = ( { isLoading, setIsLoading } ) => {
             setIsLoading( true )
             console.log("isLoading", isLoading )
             // fetch('https://official-joke-api.appspot.com/jokes/random')
-            fetch('https://twittezer.herokuapp.com/random')
+            // fetch('https://twittezer.herokuapp.com/random')
+            fetch('https://backend-omega-seven.vercel.app/api/getjoke')
                 .then (( response ) => response.json())
                 .then (( dataReturnedFromFetch ) => {
                     setCurrentJoke( dataReturnedFromFetch )
@@ -28,10 +29,11 @@ const JokeContainer = ( { isLoading, setIsLoading } ) => {
     const displayJokeSetup = () => {
 
         if( currentJoke.length > 0) {
-        const jokeQuestion = currentJoke[0].joke_text;
-        const jokeAnswer = currentJoke[0].joke_punchline;
+        const jokeQuestion = currentJoke[0].question;
+        const jokeAnswer = currentJoke[0].punchline;
 
-        // console.log(jokeQuestion)
+        console.log(jokeQuestion)
+        console.log(jokeAnswer)
         return (
             <div>
                 {/* when isLoading is true run... */}
@@ -42,7 +44,7 @@ const JokeContainer = ( { isLoading, setIsLoading } ) => {
                     </div>
                 }
                 {/* when currentJoke.id & isLoading is false run... */}
-                { currentJoke[0].joke_id && !isLoading && 
+                { currentJoke[0].question && !isLoading && 
                     <div>
                     <p className="joke"> { jokeQuestion }</p>
             
